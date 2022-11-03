@@ -1,115 +1,121 @@
 .main{
-    color:white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color:white;
     text-align: center;
 }
+
 .header{
     align-self: start;
-    margin: 5vw 15vw;
     display: flex;
-    text-align: left;
     align-items: center;
+    margin: 5vw 15vw;
+    text-align: left;
 }
 .header p{
     margin-bottom: 0px;
-    padding-left: 7px;
     font-weight: 100;
+    padding-left: 7px;
 }
+
 .h1 {
-    font-weight: 700;
-    /* font-size: 4vw; */
-    font-size:calc(18px + .5vw);
     margin-top: 50px;
+    font-weight: 700;
+    font-size: calc(14px + 1vw);
 }
+
+/* --- search --- */
 #search{
     display:flex;
     align-items: center;
+    width: calc(250px + 10vw);
     padding: 10px 0px;
-    min-width: 250px;
-    width: 25vw;
-    color: lightgray;
     border-bottom: 0.5px solid grey;
+    color: lightgray;
 }
 #search input{
-    align-self: start;
-    width: calc(250px + 1vw);
-    font-size:calc(10px + .5vw);
-    background-color:#00000000;
     padding: 0px 10px 0px;
+    background-color:#00000000;
     border-width: 0px;
-    color: white;
     font-weight: 200;
+    font-size: calc(10px + .75vw);
+    color: white;
 }
+
+/* --- overall div --- */
 .schoolsDiv{
-    width: 25vw;
-    min-width: 250px;
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
     align-items: center;
+    width: calc(280px + 10vw);
     height: 75vh;
+    margin-top: 10px;
     overflow: scroll;
 }
+
+/* --- overlay under search bar --- */
 #overlay{
     position: absolute;
-    min-width: 250px;
-    width:25vw;
+    width: calc(250px + 10vw);
     height: 20px;
     margin-top: -10px;
-    /* background-image: linear-gradient(#17034b, #1a0255, #00000000); */
+    background-image: linear-gradient(#17034b, #1a0255, #00000000);
     z-index: 1;
 }
+
+/* --- each school general style --- */
 .school{
     display: flex;
     align-items: center;
+    width: calc(250px + 10vw);
     padding: 5px 0px 5px 5px;
     margin: 3px 0px;
-    min-width: 250px;
-    width: 25vw;
     border-radius: 15px;
     background-color: #373c48;
-    
 }
 .school:hover{
     background-color: #23252c;
 }
-.school div{
-    margin: 0px 10px;
-}
 .school p{
-    font-size: 12px;
     margin-bottom: 0;
+    text-align: left;
 }
+
+/* --- circle with letter --- */
 #circle{
     display: flex;
-    align-self: center;
     align-items: center;
     justify-content: center;
     width: calc(40px + 1vw);
     height: calc(40px + 1vw);
-    background-image: linear-gradient(to bottom right, #051175, #030c5f , #000000);
+    margin-left: 0px;
+    margin-right: 10px;
     border-radius: 50%;
-    margin: 0px;
+    background-image: linear-gradient(to bottom right, #051175, #030c5f , #000000);
 }
 #circle p{
     font-weight: 600;
     font-size: calc(14px + 1vw);
-    justify-self: center;
-}
-#name{
-    font-weight: 400;
-    font-size: calc(8px + 1vw);
-    text-align: left;
-}
-#county{
-    font-weight: 200;
-    font-size: calc(6px + 1vw);
-    text-align: left;
 }
 
-/* spinner */
+/* school's name */
+#name{
+    font-weight: 400;
+    font-size: calc(10px + .75vw);
+}
+
+/* school's county name */
+#county{
+    font-weight: 200;
+    font-size: calc(8px + .75vw);
+}
+
+/* loading and spinner */
+#loading{
+    margin-top: 80px;
+    font-size: calc(14px + 1vw);
+}
 .lds-ring {
     display: inline-block;
     position: relative;
@@ -120,8 +126,8 @@
     box-sizing: border-box;
     display: block;
     position: absolute;
-    width: 64px;
-    height: 64px;
+    width: calc(50px + 1vw);
+    height: calc(50px + 1vw);
     margin: 8px;
     border: 8px solid #fff;
     border-radius: 50%;
