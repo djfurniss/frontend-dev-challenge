@@ -96,8 +96,9 @@ export default function Home({ schools }: any) {
       </div>
      
       {isLoading 
-        ? <div>
+        ? <div id={styles.loading}>
             <p>Loading</p>
+            {/* spinner */}
             <div className={styles["lds-ring"]}><div></div><div></div><div></div><div></div></div>
           </div>
         : <div className={styles.schoolsDiv}>
